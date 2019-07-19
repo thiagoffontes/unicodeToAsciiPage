@@ -1,6 +1,12 @@
 <html>
 	<head>
 		<script type="text/javascript">
+			function unicodeEscape(str) {
+			  return str.replace(/[\s\S]/g, function (escape) {
+			    return '\\u' + ('0000' + escape.charCodeAt().toString(16)).slice(-4);
+			  });
+			}
+
 			window.onload = function() {
 				let oButton = document.querySelector("#convert");
 				oButton.onclick = function() {
