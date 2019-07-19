@@ -7,12 +7,33 @@
 			  });
 			}
 
+			function isASCII(str, extended) {
+    			return (extended ? /^[\x00-\xFF]*$/ : /^[\x00-\x7F]*$/).test(str);
+			}
+
+			function escapeCharacter (inChar) {
+				if (isASCII(inChar)){
+					return inChar;
+				} else {
+					return unicodeEscape(inChar);
+				}
+			}
+
 			window.onload = function() {
 				let oButton = document.querySelector("#convert");
 				oButton.onclick = function() {
 					let oInput = document.querySelector("#txinput");
 					let oOutPut = document.querySelector("#txoutput");
 					debugger;
+
+					let outStr = "";
+
+					for (let i = 0; i < oInput.value.length; i++){
+						outStr += escapeCharacter(oInput.value[i]);
+					}
+
+					debugger;
+
 				}
 			};
 		</script>
