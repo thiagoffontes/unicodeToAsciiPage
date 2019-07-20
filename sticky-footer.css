@@ -9,7 +9,7 @@ body {
   margin-bottom: 60px;
 }
 .footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
@@ -30,8 +30,16 @@ body > .container {
 .footer > .container {
   padding-right: 15px;
   padding-left: 15px;
+  text-align: end;
 }
 
 code {
   font-size: 80%;
+}
+
+.converttxta {
+  width: 95%;
+  height: calc(90vh - 200px);
+  margin-bottom: 0.5rem;
+  resize: none;
 }
