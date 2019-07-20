@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Unicode to ASCII (Unicode Escaped)</title>
+	<script src="app.js"></script>
+	<link href="sticky-footer.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body class="bg-light">
+	<nav>
+		<div class="navbar navbar-dark bg-dark shadow-sm">
+			<div class="container d-flex justify-content-between">
+				<strong class="navbar-brand d-flex align-items-center">Unicode to ASCII (Unicode Escaped)</strong>
+			</div>
+		</div>
+	</nav>
+	<main class="bd-content p-5 wrapper">
+		<div id="container" class="container">
+			<div class="row">
+				<div class="col-sm">
+					<div id="inputHeader" class="row justify-content-center">
+						<h2>Input</h2>
+					</div>
+					<div id="inputarea" class="row justify-content-center">
+						<textarea id="txinput" wrap="off" spellcheck="false" style="width: 90%; min-height: 250px; margin-bottom: 0.5rem;">
+						</textarea>
+					</div>
+				</div>
+				<div class="col-sm">
+					<div id="outputHeader" class="row justify-content-center">
+						<h2>Output</h2>
+					</div>
+					<div id="outputArea" class="row justify-content-center">
+						<textarea id="txoutput" wrap="off" spellcheck="false" style="width: 90%; min-height: 250px; margin-bottom: 0.5rem;">
+						</textarea>
+					</div>	
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer class="footer bg-dark shadow-sm">
+		<div class="container" style="text-align: end;">
+			<button id="convert" class="btn btn-light">Convert</button>
+		</div>
+	</footer>
+</body>
+</html>
