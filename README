@@ -1,1 +1,1 @@
-Little tool for i18n escaping unicode when using ui5's buggy encoding
+Little tool for escaping unicode when using ui5's buggy encoding in i18n files
