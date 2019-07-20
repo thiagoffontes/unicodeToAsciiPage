@@ -21,10 +21,25 @@ function escapeCharacter (inChar) {
 	}
 }
 
-window.onload = function() {
-	
-	clearTextAreas();
+function syncScrolls () {
+	let oInput = document.querySelector("#txinput");
+	let oOutPut = document.querySelector("#txoutput");
 
+	const scrollInput =  () => {
+		oInput.scrollTop = oOutPut.scrollTop;
+		oInput.scrollLeft = oOutPut.scrollLeft;
+	};
+
+	const scrollOutput =  () => {
+		oOutPut.scrollTop = oInput.scrollTop;
+		oOutPut.scrollLeft = oInput.scrollLeft;
+	};
+
+	oInput.addEventListener('scroll', scrollOutput, false);
+	oOutPut.addEventListener('scroll', scrollInput, false);
+}
+
+function convertButton () {
 	let oButton = document.querySelector("#convert");
 	oButton.onclick = function() {
 		let oInput = document.querySelector("#txinput");
@@ -37,5 +52,16 @@ window.onload = function() {
 		}
 
 		oOutPut.value = outStr;
-	}
+
+		oOutPut.scrollTop = oInput.scrollTop;
+		oOutPut.scrollLeft = oInput.scrollLeft;
+	}	
+}
+
+window.onload = function() {
+	
+	clearTextAreas();
+	syncScrolls();
+	convertButton();
+
 };
